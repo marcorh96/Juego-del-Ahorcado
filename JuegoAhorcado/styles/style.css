@@ -1,0 +1,305 @@
+/*Ahorcado 1 Figma*/
+body,
+html {
+    width: 100%;
+    background: #e9ecf8;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    width: 100%;
+}
+
+.logo {
+    width: 60px;
+    margin: 2em 0 0 2em;
+}
+
+.screen-buttons-principal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: block;
+}
+
+.ul-inicio {
+    list-style: none;
+    display: inline-block;
+    margin: 13em 38%;
+}
+
+.buttons-position-start {
+    margin: 2em 0;
+}
+
+.button-start-game {
+    display: flex;
+    height: 10em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+}
+
+.button-start-game span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-add-word {
+    display: flex;
+    height: 8em;
+    width: 15em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+}
+
+.button-add-word span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+/*Pantalla Ingresar Palabra*/
+
+
+.screen-add-word {
+    width: 100%;
+    padding-left: 5%;
+    display: none;
+}
+
+.textarea-position {
+    width: 60%;
+    padding: 8em 0;
+}
+
+.textarea-position textarea {
+    width: 100%;
+    height: 2.5em;
+    position: relative;
+    background: none transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 2.5em;
+    margin: 0 50%;
+}
+
+.advice-words {
+    margin-left: 28%;
+}
+
+.advice-words span {
+    font-size: 1.3em;
+}
+
+.ul-add-word-position {
+    width: 100%;
+}
+
+.ul-add-word {
+    width: 100%;
+    margin: 1.5em 25%;
+    list-style: none;
+}
+
+.ul-add-word li {
+    display: inline-block;
+    margin-right: 4em;
+}
+
+.button-save {
+    height: 7em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.button-save span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-cancel {
+    height: 7em;
+    width: 20em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+
+}
+
+.button-cancel span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+/*--------------------------------------------------------------------------------------------------------Screen Game---------------------------------------------------------------------------------------------------------------*/
+
+
+.screen-game {
+    width: 100%;
+    display: none;
+}
+
+.hanged-picture {
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.base1 {
+    position: absolute;
+    left: 22em;
+    top: 22.5em;
+}
+
+.base2 {
+    position: absolute;
+    left: 24em;
+}
+
+.base3 {
+    position: absolute;
+    left: 24em;
+}
+
+.base4 {
+    position: absolute;
+    left: 35em;
+}
+.base5{
+    position: absolute;
+    top: 3em;
+    left: 33.15em;
+    display: none;
+}
+.base6{
+    position: absolute;
+    top: 6.6em;
+    left: 35em;
+    display: none;
+}
+.base7{
+    position: absolute;
+    top: 15em;
+    left: 32.9em;
+    display: none;
+}
+.base8{
+    position: absolute;
+    top: 15em;
+    left: 35.2em;
+    display: none;
+}
+.base9{
+    position: absolute;
+    top: 8em;
+    left: 35em;
+    display: none;
+}
+.base10{
+    position: absolute;
+    top: 8em;
+    left: 32.9em;
+    display: none;
+}
+.guessed-words-position{
+    width: 52%;
+    position: fixed;
+    margin: 27em 0 0 27em;
+    display: flex;
+    justify-content: center;
+}
+.guessed-words-position span{
+    width: 80px;
+    visibility: hidden;
+    font-size: 2em;
+    margin-left: 20px;
+    
+}
+.words-space-position{
+    width: 52%;
+    position: fixed;
+    margin: 30em 0 0 25em;
+    display: flex;
+    justify-content: center;
+    
+}
+.words-space{
+    width: 80px;
+    margin-left: 20px;
+}
+.wrong-words-position{
+    width: 30%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin: 34em 0 0 38em;
+}
+.wrong-words{
+    margin-left: 1.5em;
+}
+
+.ul-new-game-position {
+    position: fixed;
+    width: 50%;
+    list-style: none;
+    top: 47em;
+    left: 32em;
+}
+
+.ul-new-game-position li {
+    display: inline-block;
+}
+.button-new-game {
+    height: 7em;
+    width: 20em;
+    font-size: 1em;
+    background: #AAB2D5;
+    border-radius: 20px;
+    border: none;
+    margin-right: 3em;
+}
+
+.button-new-game span {
+    margin: auto;
+    font-size: 30px;
+    color: #FAF3F3;
+}
+
+.button-desist {
+    height: 7em;
+    width: 20em;
+    margin-left: 2.5em;
+    font-size: 1em;
+    border-radius: 18px;
+    border: none;
+
+}
+
+.button-desist span {
+    margin: auto;
+    font-size: 20px;
+    color: #0A3871;
+}
+
+
+/*Codigo button Active*/
+button:active {
+    border: 3px solid black;
+}

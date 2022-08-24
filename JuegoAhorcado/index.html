@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+
+<body>
+    <header>
+        <img src="imagenes/logo.png" class="logo" alt="Logo de la página">
+
+    </header>
+    <main>
+        <section class="screen-buttons-principal" id="screenPrincipal">
+            <ul class="ul-inicio">
+                <li class="buttons-position-start">
+                    <button class="button-start-game" onclick="gameStart()"><span>Iniciar Juego</span></button>
+                </li>
+                <li class="buttons-position-start">
+                    <button class="button-add-word" onclick="addWord()"><span>Agregar Nueva Palabra</span></button>
+                </li>
+            </ul>
+        </section>
+        <section class="screen-add-word" id="screenAddWord">
+            <div class="textarea-position">
+                <textarea placeholder="Ingrese una palabra" maxlength="8" id="textAreaAddWord"></textarea>
+            </div>
+            <div class="advice-words">
+                <img src="imagenes/advice.png">
+                <span>Max. de 8 letras</span5>
+            </div>
+            <div class="ul-add-word-position">
+                <ul class="ul-add-word">
+                    <li><button class="button-save" onclick="saveWord()"><span>Guardar y empezar</span></button></li>
+                    <li><button class="button-cancel" onclick="cancel()"><span>Cancelar</span></button></li>
+                </ul>
+            </div>
+        </section>
+        <section class="screen-game" id="screenGame">
+            <div class="hanged-picture">
+                <img src="imagenes/char/Rectangle 14.png" class="base1">
+                <img src="imagenes/char/Rectangle 15.png" class="base2">
+                <img src="imagenes/char/Rectangle 16.png" class="base3">
+                <img src="imagenes/char/Rectangle 17.png" class="base4">
+                <div id="hangedPicture">
+                    <img src="imagenes/char/Ellipse 9 (Stroke).png" class="base5" id="1">
+                    <img src="imagenes/char/Rectangle 18.png" class="base6" id="2">
+                    <img src="imagenes/char/Rectangle 19.png" class="base7" id="3">
+                    <img src="imagenes/char/Rectangle 20.png" class="base8" id="4">
+                    <img src="imagenes/char/Rectangle 21.png" class="base9" id="5">
+                    <img src="imagenes/char/Rectangle 22.png" class="base10" id="6">
+                </div>
+            </div>
+            <div class="guessed-words-position" id="guessedWords">
+
+            </div>
+            <div class="words-space-position" id="wordSelected">
+
+            </div>
+            <div class="wrong-words-position" id="wrongWordsResult">
+                <span class="wrong-words"></span>
+            </div>
+            <div class="ul-new-game-position">
+                <ul>
+                    <li><button class="button-new-game" type="button" onclick="newGame()"><span>Nuevo
+                                Juego</span></button></li>
+                    <li><button class="button-desist" type="button"
+                            onclick="desistGame()"><span>Desistir</span></button></li>
+                </ul>
+            </div>
+
+        </section>
+        <script src="js/script.js"></script>
+    </main>
+
+</body>
+
+
+</html>
