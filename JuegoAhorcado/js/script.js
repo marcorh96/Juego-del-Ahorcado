@@ -7,7 +7,7 @@ var wrongWordsResult = document.getElementById("wrongWordsResult");
 var textAreaAddWord = document.getElementById("textAreaAddWord");
 var gameFinishedVictory = document.getElementById("gameFinishedVictory");
 var gameFinishedLose = document.getElementById("gameFinishedLose");
-var savedWords = ["HTML"];
+var savedWords = ["HTML","ALURA","MARCO","UNO","PALABRA"];
 var random;
 var keysUsed = [];
 var arrayRandom = [];
