@@ -182,76 +182,115 @@ main {
     position: absolute;
     left: 35em;
 }
-.base5{
+
+.base5 {
     position: absolute;
     top: 3em;
     left: 33.15em;
     display: none;
 }
-.base6{
+
+.base6 {
     position: absolute;
     top: 6.6em;
     left: 35em;
     display: none;
 }
-.base7{
+
+.base7 {
     position: absolute;
     top: 15em;
     left: 32.9em;
     display: none;
 }
-.base8{
+
+.base8 {
     position: absolute;
     top: 15em;
     left: 35.2em;
     display: none;
 }
-.base9{
+
+.base9 {
     position: absolute;
     top: 8em;
     left: 35em;
     display: none;
 }
-.base10{
+
+.base10 {
     position: absolute;
     top: 8em;
     left: 32.9em;
     display: none;
 }
-.guessed-words-position{
+
+.game-finished-victory {
+    width: 30px;
+    position: absolute;
+    top: 20em;
+    left: 65em;
+    display: none;
+}
+.game-finished-victory p {
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+}
+
+.game-finished-lose {
+    width: 150px;
+    position: absolute;
+    top: 20em;
+    left: 76em;
+    display: none;
+
+}
+.game-finished-lose p{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+.guessed-words-position {
     width: 52%;
     position: fixed;
     margin: 27em 0 0 27em;
     display: flex;
     justify-content: center;
 }
-.guessed-words-position span{
+
+.guessed-words-position span {
     width: 80px;
     visibility: hidden;
     font-size: 2em;
     margin-left: 20px;
-    
+
 }
-.words-space-position{
+
+.words-space-position {
     width: 52%;
     position: fixed;
     margin: 30em 0 0 25em;
     display: flex;
     justify-content: center;
-    
+
 }
-.words-space{
+
+.words-space {
     width: 80px;
     margin-left: 20px;
 }
-.wrong-words-position{
+
+.wrong-words-position {
     width: 30%;
     position: fixed;
     display: flex;
     justify-content: center;
     margin: 34em 0 0 38em;
 }
-.wrong-words{
+
+.wrong-words {
     margin-left: 1.5em;
 }
 
@@ -266,6 +305,7 @@ main {
 .ul-new-game-position li {
     display: inline-block;
 }
+
 .button-new-game {
     height: 7em;
     width: 20em;
