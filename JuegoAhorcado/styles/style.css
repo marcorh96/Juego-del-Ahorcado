@@ -428,6 +428,9 @@ button:active {
     .hanged-picture{
         margin-top: 30px;
     }
+    .guessed-words-position {
+        width: 52%;
+    }
     .guessed-words-position span {
         margin-right: .98em;
         margin-left: 0;
