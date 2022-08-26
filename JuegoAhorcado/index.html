@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Juego del Ahorcado</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -55,29 +55,33 @@
                     <img src="imagenes/char/Rectangle 21.png" class="base9" id="5">
                     <img src="imagenes/char/Rectangle 22.png" class="base10" id="6">
                 </div>
+                <div class="game-finished-victory" id="gameFinishedVictory">
+                    <p> Felicidades Ganaste!</p>
+                </div>
+                <div class="game-finished-lose" id="gameFinishedLose">
+                    <p>Perdiste mejor suerte para la próxima!</p>
+                </div>
             </div>
-            <div class="game-finished-victory" id="gameFinishedVictory">
-                <p> Felicidades Ganaste!</p>
-            </div>
-            <div class="game-finished-lose" id="gameFinishedLose">
-                <p>Perdiste mejor suerte para la próxima!</p>
-            </div>
-            <div class="guessed-words-position" id="guessedWords">
+            <div class="guessed-words-centred">
+                <div class="guessed-words-position" id="guessedWords">
 
+                </div>
             </div>
-            <div class="words-space-position" id="wordSelected">
+            <div class="words-space-centred">
+                <div class="words-space-position" id="wordSelected">
 
-            </div>
-            <div class="wrong-words-position" id="wrongWordsResult">
-                <span class="wrong-words"></span>
-            </div>
-            <div class="ul-new-game-position">
-                <ul>
-                    <li><button class="button-new-game" type="button" onclick="newGame()"><span>Nuevo
-                                Juego</span></button></li>
-                    <li><button class="button-desist" type="button"
-                            onclick="desistGame()"><span>Desistir</span></button></li>
-                </ul>
+                </div>
+                <div class="wrong-words-position" id="wrongWordsResult">
+                    <span class="wrong-words"></span>
+                </div>
+                <div class="ul-new-game-position">
+                    <ul>
+                        <li><button class="button-new-game" type="button" onclick="newGame()"><span>Nuevo
+                                    Juego</span></button></li>
+                        <li><button class="button-desist" type="button"
+                                onclick="desistGame()"><span>Desistir</span></button></li>
+                    </ul>
+                </div>
             </div>
 
         </section>

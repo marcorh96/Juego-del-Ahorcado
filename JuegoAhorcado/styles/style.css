@@ -1,7 +1,6 @@
 /*Ahorcado 1 Figma*/
 body,
 html {
-    width: 100%;
     background: #e9ecf8;
     margin: 0;
     padding: 0;
@@ -157,81 +156,82 @@ main {
 }
 
 .hanged-picture {
-    width: 60%;
-    position: relative;
+    width: 340px;
+    height: 360px;
     margin: 0 auto;
+    position: relative;
 }
 
 .base1 {
     position: absolute;
-    left: 22em;
-    top: 22.5em;
+    margin-top: 354.4px;
 }
 
 .base2 {
     position: absolute;
-    left: 24em;
+    margin-left: 24px;
 }
 
 .base3 {
     position: absolute;
-    left: 24em;
+    margin-left: 24px;
 }
 
 .base4 {
     position: absolute;
-    left: 35em;
+    margin-left: 198px;
 }
 
 .base5 {
     position: absolute;
-    top: 3em;
-    left: 33.15em;
+    margin-top: 47px;
+    margin-left: 168.15px;
     display: none;
 }
 
 .base6 {
     position: absolute;
-    top: 6.6em;
-    left: 35em;
+    margin-top: 109.6px;
+    margin-left: 198px;
     display: none;
 }
 
 .base7 {
     position: absolute;
-    top: 15em;
-    left: 32.9em;
+    margin-top: 115px;
+    margin-left: 162.9px;
     display: none;
 }
 
 .base8 {
     position: absolute;
-    top: 15em;
-    left: 35.2em;
+    margin-top: 115px;
+    margin-left: 201.2px;
     display: none;
 }
 
 .base9 {
     position: absolute;
-    top: 8em;
-    left: 35em;
+    margin-top: 242px;
+    margin-left: 200px;
     display: none;
 }
 
 .base10 {
     position: absolute;
-    top: 8em;
-    left: 32.9em;
+    margin-top: 242px;
+    margin-left: 161.9px;
     display: none;
 }
 
 .game-finished-victory {
     width: 30px;
     position: absolute;
-    top: 20em;
-    left: 65em;
+    margin-top: 50px;
+    margin-left: 280px;
     display: none;
 }
+
 .game-finished-victory p {
     font-size: 30px;
     color: green;
@@ -241,21 +241,27 @@ main {
 .game-finished-lose {
     width: 150px;
     position: absolute;
-    top: 20em;
-    left: 76em;
+    margin-top: 50px;
+    margin-left: 280px;
     display: none;
 
 }
-.game-finished-lose p{
+
+.game-finished-lose p {
     font-size: 30px;
     color: red;
     font-weight: bold;
 }
 
+.guessed-words-centred {
+    display: flex;
+    justify-content: center;
+}
+
 .guessed-words-position {
     width: 52%;
-    position: fixed;
-    margin: 27em 0 0 27em;
+    position: absolute;
+    margin: 2em 0 0 3em;
     display: flex;
     justify-content: center;
 }
@@ -268,26 +274,33 @@ main {
 
 }
 
+.words-space-centred {
+    display: flex;
+    justify-content: center;
+}
+
 .words-space-position {
     width: 52%;
-    position: fixed;
-    margin: 30em 0 0 25em;
+    position: absolute;
+    margin: 5em;
     display: flex;
     justify-content: center;
 
 }
 
 .words-space {
-    width: 80px;
+    max-width: 80px;
+    height: auto;
+    object-fit: contain;
     margin-left: 20px;
 }
 
 .wrong-words-position {
     width: 30%;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
-    margin: 34em 0 0 38em;
+    margin: 8em;
 }
 
 .wrong-words {
@@ -295,11 +308,8 @@ main {
 }
 
 .ul-new-game-position {
-    position: fixed;
-    width: 50%;
     list-style: none;
-    top: 47em;
-    left: 32em;
+    margin: 12em 0 0 0;
 }
 
 .ul-new-game-position li {
@@ -342,4 +352,140 @@ main {
 /*Codigo button Active*/
 button:active {
     border: 3px solid black;
+}
+
+/* Responsive */
+@media screen and (max-width:1280px) {
+    .ul-new-game-position ul{
+         margin-bottom: 2em;
+    }
+
+}
+
+
+@media screen and (max-width:840px) {
+    /*ScreenPrincipal*/
+    .guessed-words-position {
+        width: 100%;
+    }
+    .ul-inicio {
+        margin: 30%;
+    }
+    .words-space{
+        max-width: 50px;
+        margin-left: 55px;
+    }
+    .words-space-position{
+        margin-left: 35px;
+    }
+    .guessed-words-position span {
+        font-size: 1.9em;
+    }
+    
+}
+
+@media screen and (max-width:480px) {
+    .logo {
+        margin: 1em 0 0 1em;
+    }
+
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 10%;
+    }
+
+    .buttons-position-start {
+        margin: 2em 0;
+    }
+
+    /*Screen agregar palabra*/
+    .textarea-position {
+        padding: 4em 0;
+    }
+
+    .textarea-position textarea {
+        height: 2.3em;
+        margin: 0 20%;
+    }
+
+    .advice-words {
+        margin-left: 10%;
+    }
+
+    .ul-add-word {
+        margin: 5% 0 0 8%;
+    }
+
+    .ul-add-word li {
+        margin: 1.5em 0;
+    }
+
+    .button-cancel {
+        margin-left: 0;
+    }
+
+    /*Screen Game*/
+    .hanged-picture{
+        margin-top: 30px;
+    }
+    .guessed-words-position span {
+        margin-right: .98em;
+        margin-left: 0;
+        font-size: 1.65em;
+    }
+    .game-finished-victory{
+        margin-left: 230px;
+    }
+    .game-finished-lose{
+        margin-left: 250px;
+    }
+    .ul-new-game-position {
+        margin: 8em 0 0 5em;
+    }
+    .wrong-words-position{
+        margin: 6em;
+    }
+    .words-space-position{
+        margin-left: 110px;
+    }
+    .words-space{
+        max-width: 30px;
+        margin-left: 0px;
+        margin-right: 12px;
+    }
+    .ul-new-game-position{
+        margin: 10em 0 0 3em;
+    }
+    .ul-new-game-position li{
+        margin-bottom: 2em;
+    }
+    .button-desist{
+        margin-left: 0;
+    }
+
+
+
+}
+
+@media screen and (max-width:380px) {
+
+    /*Screen agregar palabra*/
+    .textarea-position {
+        padding: 3em 0;
+    }
+
+    .ul-add-word {
+        margin: 5% 0 0 0;
+    }
+
+    .ul-add-word li {
+        margin: .5em 0;
+    }
+}
+@media screen and (max-width:360px) {
+
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 7%;
+    }
 }
