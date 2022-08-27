@@ -7,6 +7,7 @@ var wrongWordsResult = document.getElementById("wrongWordsResult");
 var textAreaAddWord = document.getElementById("textAreaAddWord");
 var gameFinishedVictory = document.getElementById("gameFinishedVictory");
 var gameFinishedLose = document.getElementById("gameFinishedLose");
+var inputPrueba = document.getElementById("input-prueba");
 var savedWords = ["HTML","ALURA","MARCO","UNO","PALABRA"];
 var random;
 var keysUsed = [];
@@ -15,47 +16,14 @@ var endGame = 0;
 var oportunity = 0;
 var screenGameActive = false;
 document.onkeydown = function (event) {
+    var words = inputPrueba.value;
+    inputPrueba.value = words.slice(0, -1);
     var keyDown = String.fromCharCode(event.keyCode);
-    if (screenGameActive == true) {
-        if (event.keyCode >= 65 && event.keyCode <= 90) {
-            if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
-                alert("El juego ha concluido!!")
-            }
-            else if (random.includes(keyDown) && oportunity != 6) {
-                if (!keysUsed.includes(keyDown)) {
-                    keysUsed.push(keyDown);
-                    if (endGame != arrayRandom.length) {
-                        var elements = document.querySelectorAll('.' + keyDown);
-                        elements.forEach(element => {
-                            element.style.visibility = "visible";
-                            endGame++;
-                            if(endGame == arrayRandom.length){
-                                gameFinishedVictory.style.display = "block";
-                            }
-                        });
-                    } else{
-                        alert("El juego ha concluido!!")
-                    }
-                }
-            } else {
-                if (oportunity != 6 && endGame != arrayRandom.length) {
-                    oportunity++;
-                    wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
-                    document.getElementById(oportunity).style.display = "block";
-                    if(oportunity == 6){
-                        gameFinishedLose.style.display = 'block';
-                    }
-                } else if (oportunity == 6) {
-                    alert("Alcanzaste el maximo de oportunidades permitidas")
-                } else if (endGame == arrayRandom.length) {
-                    alert("El juego ha concluido!!")
-                }
-            }
-        }
-    }
+    searchWord(keyDown);
 }
 
 window.focus();
+
 
 
 function randomWords() {
@@ -113,5 +81,44 @@ function cancel() {
     screenGameActive = false;
     screenAddWord.style.display = "none";
     screenPrincipal.style.display = "block";
+}
+function searchWord(keyDown){
+    if (screenGameActive == true) {
+        if (event.keyCode >= 65 && event.keyCode <= 90) {
+            if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
+                alert("El juego ha concluido!!")
+            }
+            else if (random.includes(keyDown) && oportunity != 6) {
+                if (!keysUsed.includes(keyDown)) {
+                    keysUsed.push(keyDown);
+                    if (endGame != arrayRandom.length) {
+                        var elements = document.querySelectorAll('.' + keyDown);
+                        elements.forEach(element => {
+                            element.style.visibility = "visible";
+                            endGame++;
+                            if(endGame == arrayRandom.length){
+                                gameFinishedVictory.style.display = "block";
+                            }
+                        });
+                    } else{
+                        alert("El juego ha concluido!!")
+                    }
+                }
+            } else {
+                if (oportunity != 6 && endGame != arrayRandom.length) {
+                    oportunity++;
+                    wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
+                    document.getElementById(oportunity).style.display = "block";
+                    if(oportunity == 6){
+                        gameFinishedLose.style.display = 'block';
+                    }
+                } else if (oportunity == 6) {
+                    alert("Alcanzaste el maximo de oportunidades permitidas")
+                } else if (endGame == arrayRandom.length) {
+                    alert("El juego ha concluido!!")
+                }
+            }
+        }
+    }
 }
 

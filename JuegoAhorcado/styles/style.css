@@ -347,7 +347,18 @@ main {
     font-size: 20px;
     color: #0A3871;
 }
-
+.input-prueba{
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    background: none transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.input-prueba:focus {
+    visibility: hidden;
+}
 
 /*Codigo button Active*/
 button:active {
@@ -429,7 +440,7 @@ button:active {
         margin-top: 30px;
     }
     .guessed-words-position {
-        width: 52%;
+        width: 35%;
     }
     .guessed-words-position span {
         margin-right: .98em;
@@ -437,10 +448,15 @@ button:active {
         font-size: 1.65em;
     }
     .game-finished-victory{
-        margin-left: 230px;
+        margin-left: 210px;
+        margin-top: 40px;
+    }
+    .game-finished-victory:focus{
+        font-size: .5em;
     }
     .game-finished-lose{
-        margin-left: 250px;
+        margin-left: 210px;
+        margin-top: 40px;
     }
     .ul-new-game-position {
         margin: 8em 0 0 5em;
