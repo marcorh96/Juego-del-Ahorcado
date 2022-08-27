@@ -351,16 +351,16 @@ main {
     position: absolute;
     width: 25em;
     height: 10em;
-   /* background: none transparent;
+    background: none transparent;
     border: none;
     outline: none;
-    resize: none;*/
-    margin-top: 27.4em;
+    resize: none;
+    margin-top: 370px;
     display: none;
+    font-size: 16px;
 }
 .input-prueba:focus {
     visibility: hidden;
-    font-size: 2em;
 }
 
 /*Codigo button Active*/
