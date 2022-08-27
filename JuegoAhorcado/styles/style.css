@@ -356,6 +356,7 @@ main {
     outline: none;
     resize: none;
     margin-top: 27em;
+    display: none;
 }
 .input-prueba:focus {
     visibility: hidden;
@@ -482,6 +483,9 @@ button:active {
     }
     .button-desist{
         margin-left: 0;
+    }
+    .input-prueba{
+        display: block;
     }
 
 
