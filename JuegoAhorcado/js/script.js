@@ -17,7 +17,7 @@ var oportunity = 0;
 var screenGameActive = false;
 document.onkeydown = function (event) {
     var words = inputPrueba.value;
-    inputPrueba.value = words.slice(0, -1);
+    //inputPrueba.value = words.slice(0, -1);
     var keyDown = String.fromCharCode(event.keyCode);
     searchWord(keyDown);
 }
@@ -40,6 +40,7 @@ function newGame() {
     wordSelected.innerHTML = '';
     guessedWords.innerHTML = '';
     wrongWordsResult.innerHTML = '';
+    inputPrueba.value = '';
     gameFinishedVictory.style.display = "none";
     gameFinishedLose.style.display = 'none';
     random;

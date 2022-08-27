@@ -349,16 +349,20 @@ main {
 }
 .input-prueba{
     position: absolute;
-    width: 25em;
-    height: 10em;
+    width: 21rem;
+    height: 2rem;
     background: none transparent;
     border: none;
     outline: none;
     resize: none;
-    margin-top: 370px;
+    margin-top: 475px;
     display: none;
     font-size: 16px;
+    margin-bottom: 1em;
 }
+.input-prueba::placeholder {
+    text-align: center; 
+ }
 .input-prueba:focus {
     visibility: hidden;
 }
