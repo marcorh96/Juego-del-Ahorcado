@@ -349,15 +349,17 @@ main {
 }
 .input-prueba{
     position: absolute;
-    width: 20em;
-    height: 20em;
+    width: 25em;
+    height: 10em;
     background: none transparent;
     border: none;
     outline: none;
     resize: none;
+    margin-top: 27em;
 }
 .input-prueba:focus {
     visibility: hidden;
+    font-size: 2em;
 }
 
 /*Codigo button Active*/
