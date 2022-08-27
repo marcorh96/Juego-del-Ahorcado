@@ -351,11 +351,11 @@ main {
     position: absolute;
     width: 25em;
     height: 10em;
-    background: none transparent;
+   /* background: none transparent;
     border: none;
     outline: none;
-    resize: none;
-    margin-top: 27em;
+    resize: none;*/
+    margin-top: 27.4em;
     display: none;
 }
 .input-prueba:focus {
