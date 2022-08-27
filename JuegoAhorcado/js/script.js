@@ -73,14 +73,19 @@ function addWord() {
 
 }
 function saveWord() {
-    if (textAreaAddWord.value == undefined || textAreaAddWord.value == "") {
+    var fixedSavedWord = textAreaAddWord.value.replace(/ /g, "").toUpperCase();
+    if (fixedSavedWord == undefined || fixedSavedWord == "") {
         alert("Rellene el campo por favor!")
     } else {
-        screenGameActive = true;
-        savedWords.push(textAreaAddWord.value.replace(/ /g, "").toUpperCase());
-        newGame();
-        screenAddWord.style.display = "none";
-        screenGame.style.display = "block";
+        if (savedWords.includes(fixedSavedWord)) {
+            alert("Esa palabra ya existe!")
+        } else {
+            screenGameActive = true;
+            savedWords.push(fixedSavedWord);
+            newGame();
+            screenAddWord.style.display = "none";
+            screenGame.style.display = "block";
+        }
     }
 }
 function cancel() {
