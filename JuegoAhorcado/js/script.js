@@ -8,7 +8,7 @@ var textAreaAddWord = document.getElementById("textAreaAddWord");
 var gameFinishedVictory = document.getElementById("gameFinishedVictory");
 var gameFinishedLose = document.getElementById("gameFinishedLose");
 var inputPrueba = document.getElementById("input-prueba");
-var savedWords = ["HTML","ALURA","MARCO","UNO","PALABRA"];
+var savedWords = ["HTML", "ALURA", "MARCO", "UNO", "PALABRA"];
 var random;
 var keysUsed = [];
 var arrayRandom = [];
@@ -73,18 +73,22 @@ function addWord() {
 
 }
 function saveWord() {
-    screenGameActive = true;
-    savedWords.push(textAreaAddWord.value.toUpperCase());
-    newGame();
-    screenAddWord.style.display = "none";
-    screenGame.style.display = "block";
+    if (textAreaAddWord.value == undefined || textAreaAddWord.value == "") {
+        alert("Rellene el campo por favor!")
+    } else {
+        screenGameActive = true;
+        savedWords.push(textAreaAddWord.value.replace(/ /g, "").toUpperCase());
+        newGame();
+        screenAddWord.style.display = "none";
+        screenGame.style.display = "block";
+    }
 }
 function cancel() {
     screenGameActive = false;
     screenAddWord.style.display = "none";
     screenPrincipal.style.display = "block";
 }
-function searchWord(keyDown){
+function searchWord(keyDown) {
     if (screenGameActive == true) {
         if (event.keyCode >= 65 && event.keyCode <= 90) {
             if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
@@ -98,11 +102,11 @@ function searchWord(keyDown){
                         elements.forEach(element => {
                             element.style.visibility = "visible";
                             endGame++;
-                            if(endGame == arrayRandom.length){
+                            if (endGame == arrayRandom.length) {
                                 gameFinishedVictory.style.display = "block";
                             }
                         });
-                    } else{
+                    } else {
                         alert("El juego ha concluido!!")
                     }
                 }
@@ -111,7 +115,7 @@ function searchWord(keyDown){
                     oportunity++;
                     wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
                     document.getElementById(oportunity).style.display = "block";
-                    if(oportunity == 6){
+                    if (oportunity == 6) {
                         gameFinishedLose.style.display = 'block';
                     }
                 } else if (oportunity == 6) {
