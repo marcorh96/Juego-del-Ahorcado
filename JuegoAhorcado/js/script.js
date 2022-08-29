@@ -16,10 +16,18 @@ var endGame = 0;
 var oportunity = 0;
 var screenGameActive = false;
 document.onkeyup = function (event) {
-    alert(inputPrueba.value);
-    //inputPrueba.value = '';
-    var keyDown = String.fromCharCode(event.keyCode);
-    searchWord(keyDown);
+    var keyDown;
+    if (inputPrueba.value) {
+        keyDown = inputPrueba.value.toUpperCase();
+        alert(keyDown);
+        inputPrueba.value = '';
+        searchWord(keyDown);
+    }else if(inputPrueba.value == undefined || inputPrueba.value == ""){
+        keyDown = String.fromCharCode(event.keyCode);
+        searchWord(keyDown);
+    }
+
+   
 }
 
 window.focus();
