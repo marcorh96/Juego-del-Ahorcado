@@ -19,7 +19,6 @@ document.onkeyup = function (event) {
     var keyDown;
     if (inputPrueba.value) {
         keyDown = inputPrueba.value.toUpperCase();
-        alert(keyDown);
         inputPrueba.value = '';
         searchWord(keyDown);
     }else if(inputPrueba.value == undefined || inputPrueba.value == ""){
