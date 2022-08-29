@@ -15,7 +15,7 @@ var arrayRandom = [];
 var endGame = 0;
 var oportunity = 0;
 var screenGameActive = false;
-document.onkeydown = function (event) {
+document.onkeyup = function (event) {
     inputPrueba.value = '';
     var keyDown = String.fromCharCode(event.keyCode);
     searchWord(keyDown);
@@ -23,6 +23,37 @@ document.onkeydown = function (event) {
 
 window.focus();
 
+/*inputPrueba.on('keyup',function(e){
+
+    //for android chrome keycode fix
+    if (navigator.userAgent.match(/Android/i)) {
+
+        var inputValue = this.value;
+
+        var charKeyCode = e.keyCode || e.which;
+        if (charKeyCode == 0 || charKeyCode == 229) { 
+            charKeyCode = getKeyCode(inputValue);
+            alert(charKeyCode+' key Pressed');
+        }else{
+           alert(charKeyCode+' key Pressed');
+            }
+    }       
+});*/
+/*inputPrueba.addEventListener('textInput', function(e) {
+    // e.data will be the 1:1 input you done
+    const char = e.data; // In our example = "a"
+
+    // If you want the keyCode..
+    const keyCode = char.charCodeAt(0); // a = 97
+
+    alert(char + keyCode);
+    // Stop processing if "a" is pressed
+    if (keyCode === 97) {
+        e.preventDefault();
+        return false;
+    }
+    return true;
+});*/
 
 
 function randomWords() {

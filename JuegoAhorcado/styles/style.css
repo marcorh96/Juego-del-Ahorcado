@@ -17,21 +17,17 @@ main {
 }
 
 .screen-buttons-principal {
-    align-items: center;
-    display: flex;
-    justify-content: center;
     width: 100%;
     display: block;
 }
 
 .ul-inicio {
-    list-style: none;
-    display: inline-block;
-    margin: 13em 38%;
+    display: table; 
+    margin: 0 auto;
 }
 
 .buttons-position-start {
-    margin: 2em 0;
+    margin: 6.5em 0;
 }
 
 .button-start-game {
@@ -93,7 +89,7 @@ main {
 }
 
 .advice-words {
-    width: 40%;
+    width: 35%;
     display: block;
     margin: 1em auto;
 }
@@ -107,14 +103,15 @@ main {
 }
 
 .ul-add-word {
-    width: 40%;
+    width: 60%;
     list-style: none;
     margin: 0 auto;
+    text-align: center;
 }
 
 .ul-add-word li {
     display: inline-block;
-    margin-right: 2.5em;
+    text-align: left;
 }
 
 .button-save {
@@ -360,7 +357,7 @@ main {
     outline: none;
     resize: none;
     margin-top: 139%;
-    display: none;
+    /*display: none;*/
     font-size: 16px;
     color: #e9ecf8;
 }
@@ -379,10 +376,17 @@ button:active {
 
 /* Responsive */
 @media screen and (max-width:1280px) {
+    .logo{
+        width: 40px;
+        margin: 2em 0 2em 2em;
+    }
     .ul-new-game-position ul{
          margin-bottom: 2em;
     }
-
+    /*Screen Add word*/
+    .advice-words {
+        width: 50%;
+    }
 }
 
 
@@ -531,7 +535,7 @@ button:active {
     }
     /*Screen Game*/
     .ul-new-game-position{
-        margin: 10em 0 0 4em;
+        margin: 10em 0 0 4.5em;
     }
 }
 @media screen and (max-width:360px) {
