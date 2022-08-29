@@ -92,7 +92,7 @@ function cancel() {
 }
 function searchWord(keyDown) {
     if (screenGameActive == true) {
-        if (event.keyCode >= 65 && event.keyCode <= 90) {
+        if ((keyDown.match(/^[A-Z]*$/))) {
             if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
                 alert("El juego ha concluido!!");
             }
