@@ -16,9 +16,7 @@ var endGame = 0;
 var oportunity = 0;
 var screenGameActive = false;
 document.onkeydown = function (event) {
-    var words = inputPrueba.value;
-    inputPrueba.value = '';
-    //inputPrueba.value = words.slice(0, -1);
+    inputPrueba.value = inputPrueba.value.toUpperCase().slice(0, -1);
     var keyDown = String.fromCharCode(event.keyCode);
     searchWord(keyDown);
 }

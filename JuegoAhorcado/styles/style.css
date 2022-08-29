@@ -363,7 +363,9 @@ main {
     text-align: center; 
  }
 .input-prueba:focus {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
+    text-align: center;
 }
 
 /*Codigo button Active*/
