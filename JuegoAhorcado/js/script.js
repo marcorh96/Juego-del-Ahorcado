@@ -39,21 +39,21 @@ window.focus();
             }
     }       
 });*/
-/*inputPrueba.addEventListener('textInput', function(e) {
+inputPrueba.addEventListener('textInput', function(e) {
     // e.data will be the 1:1 input you done
     const char = e.data; // In our example = "a"
 
     // If you want the keyCode..
     const keyCode = char.charCodeAt(0); // a = 97
 
-    alert(char + keyCode);
+    alert(char);
     // Stop processing if "a" is pressed
     if (keyCode === 97) {
         e.preventDefault();
         return false;
     }
     return true;
-});*/
+});
 
 
 function randomWords() {
