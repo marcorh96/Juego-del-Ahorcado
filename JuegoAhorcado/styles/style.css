@@ -364,7 +364,7 @@ main {
  }
 .input-prueba:focus {
     /*visibility: hidden;*/
-    display: none;
+    color: #e9ecf8;
     text-align: center;
 }
 
