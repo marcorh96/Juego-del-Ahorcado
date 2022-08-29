@@ -357,7 +357,7 @@ main {
     outline: none;
     resize: none;
     margin-top: 139%;
-    /*display: none;*/
+    display: none;
     font-size: 16px;
     color: #e9ecf8;
 }
