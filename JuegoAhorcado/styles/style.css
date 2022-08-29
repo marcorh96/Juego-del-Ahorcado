@@ -358,13 +358,13 @@ main {
     margin-top: 139%;
     display: none;
     font-size: 16px;
+    color: #e9ecf8;
 }
 .input-prueba::placeholder {
     text-align: center; 
  }
 .input-prueba:focus {
     /*visibility: hidden;*/
-    color: #e9ecf8;
     text-align: center;
 }
 

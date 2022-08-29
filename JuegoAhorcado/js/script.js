@@ -95,8 +95,7 @@ function searchWord(keyDown) {
     if (screenGameActive == true) {
         if (event.keyCode >= 65 && event.keyCode <= 90) {
             if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
-                alert("El juego ha concluido!!")
-                inputPrueba.value = '';
+                alert("El juego ha concluido!!");
             }
             else if (random.includes(keyDown) && oportunity != 6) {
                 if (!keysUsed.includes(keyDown)) {
@@ -108,12 +107,10 @@ function searchWord(keyDown) {
                             endGame++;
                             if (endGame == arrayRandom.length) {
                                 gameFinishedVictory.style.display = "block";
-                                inputPrueba.value = '';
                             }
                         });
                     } else {
-                        alert("El juego ha concluido!!")
-                        inputPrueba.value = '';
+                        alert("El juego ha concluido!!");
                     }
                 }
             } else {
@@ -125,11 +122,9 @@ function searchWord(keyDown) {
                         gameFinishedLose.style.display = 'block';
                     }
                 } else if (oportunity == 6) {
-                    alert("Alcanzaste el maximo de oportunidades permitidas")
-                    inputPrueba.value = '';
+                    alert("Alcanzaste el maximo de oportunidades permitidas");
                 } else if (endGame == arrayRandom.length) {
-                    alert("El juego ha concluido!!")
-                    inputPrueba.value = '';
+                    alert("El juego ha concluido!!");
                 }
             }
         }
