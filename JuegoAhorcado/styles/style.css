@@ -58,6 +58,7 @@ main {
     font-size: 1em;
     border-radius: 18px;
     border: none;
+    background: #F5F5DC;
 }
 
 .button-add-word span {
@@ -71,29 +72,30 @@ main {
 
 .screen-add-word {
     width: 100%;
-    padding-left: 5%;
     display: none;
 }
 
 .textarea-position {
     width: 60%;
-    padding: 8em 0;
+    margin: 0 auto;
+
 }
 
 .textarea-position textarea {
-    width: 100%;
+    display: block;
+    margin: 2em auto 5em auto;
     height: 2.5em;
-    position: relative;
     background: none transparent;
     border: none;
     outline: none;
     resize: none;
-    font-size: 2.5em;
-    margin: 0 50%;
+    font-size: 3.5em;
 }
 
 .advice-words {
-    margin-left: 28%;
+    width: 40%;
+    display: block;
+    margin: 1em auto;
 }
 
 .advice-words span {
@@ -105,14 +107,14 @@ main {
 }
 
 .ul-add-word {
-    width: 100%;
-    margin: 1.5em 25%;
+    width: 40%;
     list-style: none;
+    margin: 0 auto;
 }
 
 .ul-add-word li {
     display: inline-block;
-    margin-right: 4em;
+    margin-right: 2.5em;
 }
 
 .button-save {
@@ -138,6 +140,7 @@ main {
     font-size: 1em;
     border-radius: 18px;
     border: none;
+    background: #F5F5DC;
 
 }
 
@@ -339,6 +342,7 @@ main {
     font-size: 1em;
     border-radius: 18px;
     border: none;
+    background: #F5F5DC;
 
 }
 
@@ -406,41 +410,50 @@ button:active {
 @media screen and (max-width:480px) {
     .logo {
         margin: 1em 0 0 1em;
+        width: 35px;
     }
 
     /*ScreenPrincipal*/
     .ul-inicio {
-        margin: 10%;
+        margin: 12%;
     }
 
     .buttons-position-start {
-        margin: 2em 0;
+        margin: 6em 0;
+    }
+    .button-start-game {
+        height: 7em;
+    }
+    .button-add-word{
+        height: 5.5em;
     }
 
     /*Screen agregar palabra*/
     .textarea-position {
-        padding: 4em 0;
+        width: 70%;
     }
 
     .textarea-position textarea {
-        height: 2.3em;
-        margin: 0 20%;
+        height: 1em;
+        margin: 5rem auto;
+        font-size: 2em;
     }
-
-    .advice-words {
-        margin-left: 10%;
+    .advice-words{
+        margin-bottom: 2em;
     }
 
     .ul-add-word {
-        margin: 5% 0 0 8%;
+        width: 60%;
     }
-
     .ul-add-word li {
-        margin: 1.5em 0;
+        margin:1.5em auto;
     }
-
+    .button-save{
+        width: 15em;
+    }
     .button-cancel {
         margin-left: 0;
+        width: 15em;
     }
 
     /*Screen Game*/
@@ -481,13 +494,17 @@ button:active {
         margin-right: 12px;
     }
     .ul-new-game-position{
-        margin: 10em 0 0 3em;
+        margin: 10em 0 0 5.5em;
     }
     .ul-new-game-position li{
         margin-bottom: 2em;
     }
+    .button-new-game{
+        width: 15em;
+    }
     .button-desist{
         margin-left: 0;
+        width: 15em;
     }
     .input-prueba{
         display: block;
@@ -497,25 +514,30 @@ button:active {
 
 }
 
-@media screen and (max-width:380px) {
-
+@media screen and (max-width:390px) {
+    /*ScreenPrincipal*/
+    .ul-inicio {
+        margin: 8%;
+    }
     /*Screen agregar palabra*/
-    .textarea-position {
-        padding: 3em 0;
+    .advice-words{
+        width: 65%;
     }
-
     .ul-add-word {
-        margin: 5% 0 0 0;
+        width: 65%;
     }
-
     .ul-add-word li {
-        margin: .5em 0;
+        margin:1.5em auto;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 10em 0 0 4em;
     }
 }
 @media screen and (max-width:360px) {
 
     /*ScreenPrincipal*/
     .ul-inicio {
-        margin: 7%;
+        margin: 6%;
     }
 }
