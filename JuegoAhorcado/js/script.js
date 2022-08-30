@@ -25,7 +25,6 @@ document.onkeyup = function (event) {
         keyDown = String.fromCharCode(event.keyCode);
         if(keyDown.toUpperCase().charCodeAt(0) == 192){
             keyDown = "Ñ";
-            alert(keyDown);
         }
         searchWord(keyDown);
     }
