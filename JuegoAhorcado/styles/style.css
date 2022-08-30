@@ -466,6 +466,7 @@ button:active {
     }
     .guessed-words-position {
         width: 35%;
+        margin: .5em 0 0 3em;
     }
     .guessed-words-position span {
         margin-right: .98em;
@@ -483,6 +484,9 @@ button:active {
         margin-left: 210px;
         margin-top: 40px;
     }
+    .words-space-centred {
+        margin: -40px 0 0 0;
+    }
     .ul-new-game-position {
         margin: 8em 0 0 5em;
     }
@@ -498,20 +502,30 @@ button:active {
         margin-right: 12px;
     }
     .ul-new-game-position{
-        margin: 10em 0 0 5.5em;
+        margin: 10em 0 0 1.5em;
     }
-    .ul-new-game-position li{
-        margin-bottom: 2em;
+    .ul-new-game-position ul{
+        margin-bottom: 0;
     }
     .button-new-game{
-        width: 15em;
+        width: 8rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
+    .button-new-game span{
+        font-size: 1rem;
     }
     .button-desist{
         margin-left: 0;
-        width: 15em;
+        width: 8rem;
+        height: 4rem;
+    }
+    .button-desist span{
+        font-size: 1rem;
     }
     .input-prueba{
         display: block;
+        margin-top: 127%;
     }
 
 
@@ -519,6 +533,9 @@ button:active {
 }
 
 @media screen and (max-width:390px) {
+    .logo {
+        margin: .5em 0 0 .5em;
+    }
     /*ScreenPrincipal*/
     .ul-inicio {
         margin: 8%;
@@ -535,7 +552,10 @@ button:active {
     }
     /*Screen Game*/
     .ul-new-game-position{
-        margin: 10em 0 0 4.5em;
+        margin: 10em 0 0 0;
+    }
+    .hanged-picture{
+        margin-top: 15px;
     }
 }
 @media screen and (max-width:360px) {
@@ -543,5 +563,16 @@ button:active {
     /*ScreenPrincipal*/
     .ul-inicio {
         margin: 6%;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 9.12em 0 0 0;
+    }
+    .hanged-picture{
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    .prueba-input{
+        margin-left: -20px;
     }
 }
