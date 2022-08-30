@@ -439,6 +439,7 @@ button:active {
         height: 1em;
         margin: 5rem auto;
         font-size: 2em;
+        text-align: center;
     }
     .textarea-position textarea::placeholder{
         text-align: center;
