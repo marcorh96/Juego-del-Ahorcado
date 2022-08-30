@@ -23,6 +23,10 @@ document.onkeyup = function (event) {
         searchWord(keyDown);
     }else if(inputPrueba.value == undefined || inputPrueba.value == ""){
         keyDown = String.fromCharCode(event.keyCode);
+        if(keyDown.toUpperCase().charCodeAt(0) == 192){
+            keyDown = "Ñ";
+            alert(keyDown);
+        }
         searchWord(keyDown);
     }
 
@@ -99,7 +103,7 @@ function cancel() {
 }
 function searchWord(keyDown) {
     if (screenGameActive == true) {
-        if ((keyDown.match(/^[A-Z]*$/))) {
+        if (keyDown.match(/^[A-Z]*$/) || keyDown.match('Ñ')) {
             if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
                 alert("El juego ha concluido!!");
             }
