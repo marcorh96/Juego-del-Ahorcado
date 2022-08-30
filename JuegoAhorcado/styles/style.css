@@ -98,12 +98,10 @@ main {
     font-size: 1.3em;
 }
 
-.ul-add-word-position {
-    width: 100%;
-}
+/*.ul-add-word-position {
+}*/
 
 .ul-add-word {
-    width: 60%;
     list-style: none;
     margin: 0 auto;
     text-align: center;
@@ -444,10 +442,6 @@ button:active {
     }
     .advice-words{
         margin-bottom: 2em;
-    }
-
-    .ul-add-word {
-        width: 60%;
     }
     .ul-add-word li {
         margin:1.5em auto;
