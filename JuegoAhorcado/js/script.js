@@ -83,7 +83,10 @@ function saveWord() {
     var fixedSavedWord = textAreaAddWord.value.replace(/ /g, "").replace(/\n/g, "").toUpperCase();
     if (fixedSavedWord == undefined || fixedSavedWord == "") {
         alert("Rellene el campo por favor!")
-    } else {
+    } else if(fixedSavedWord.match(/^[ÁÉÍÓÚáéíóú]*$/)){
+        alert("No se permiten palabras con tilde!");
+        textAreaAddWord.value = '';
+    } else if(fixedSavedWord){
         if (savedWords.includes(fixedSavedWord)) {
             alert("Esa palabra ya existe!")
         } else {
@@ -95,11 +98,13 @@ function saveWord() {
         }
     }
 }
+
 function cancel() {
     screenGameActive = false;
     screenAddWord.style.display = "none";
     screenPrincipal.style.display = "block";
 }
+
 function searchWord(keyDown) {
     if (screenGameActive == true) {
         if (keyDown.match(/^[A-Z]*$/) || keyDown.match('Ñ')) {
