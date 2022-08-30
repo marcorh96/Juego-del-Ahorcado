@@ -126,6 +126,8 @@ function searchWord(keyDown) {
                     } else {
                         alert("El juego ha concluido!!");
                     }
+                }else if(keysUsed.includes(keyDown)){
+                    alert("Esa palabra ya fue incluida!")
                 }
             } else {
                 if (oportunity != 6 && endGame != arrayRandom.length) {
