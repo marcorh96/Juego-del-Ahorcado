@@ -431,14 +431,20 @@ button:active {
     }
 
     /*Screen agregar palabra*/
-    .textarea-position {
-        width: 70%;
+    .textarea-position{
+        width: auto;
     }
 
     .textarea-position textarea {
         height: 1em;
         margin: 5rem auto;
         font-size: 2em;
+    }
+    .textarea-position textarea::placeholder{
+        text-align: center;
+    }
+    .textarea-position textarea:focus{
+        text-align: center;
     }
     .advice-words{
         margin-bottom: 2em;
@@ -536,13 +542,11 @@ button:active {
     }
     /*Screen agregar palabra*/
     .advice-words{
-        width: 65%;
+        margin-left: 80px;
     }
-    .ul-add-word {
-        width: 65%;
-    }
+    
     .ul-add-word li {
-        margin:1.5em auto;
+        margin:1em auto;
     }
     /*Screen Game*/
     .ul-new-game-position{
