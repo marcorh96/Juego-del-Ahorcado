@@ -11,6 +11,7 @@ var inputPrueba = document.getElementById("input-prueba");
 var savedWords = ["HTML", "ALURA", "MARCO", "UNO", "PALABRA"];
 var random;
 var keysUsed = [];
+var wrongWords = [];
 var arrayRandom = [];
 var endGame = 0;
 var oportunity = 0;
@@ -54,6 +55,7 @@ function newGame() {
     random;
     keysUsed = [];
     arrayRandom = [];
+    wrongWords = [];
     endGame = 0;
     oportunity = 0;
     randomWords();
@@ -133,10 +135,16 @@ function searchWord(keyDown) {
                 }
             } else {
                 if (oportunity != 6 && endGame != arrayRandom.length) {
-                    oportunity++;
-                    wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
-                    document.getElementById(oportunity).style.display = "block";
-                    if (oportunity == 6) {
+                    if(!wrongWords.includes(keyDown)){
+                        oportunity++;
+                        wrongWords.push(keyDown);
+                        wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
+                        document.getElementById(oportunity).style.display = "block";
+                    }
+                    else if(wrongWords.includes(keyDown)){
+                        alert("Esa palabra ya fue utilizada!")
+                    }
+                    else if (oportunity == 6) {
                         gameFinishedLose.style.display = 'block';
                     }
                 } else if (oportunity == 6) {
