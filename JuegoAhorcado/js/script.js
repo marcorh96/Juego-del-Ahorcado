@@ -80,7 +80,7 @@ function addWord() {
 
 }
 function saveWord() {
-    var fixedSavedWord = textAreaAddWord.value.replace(/ /g, "").toUpperCase();
+    var fixedSavedWord = textAreaAddWord.value.replace(/ /g, "").replace(/\n/g, "").toUpperCase();
     if (fixedSavedWord == undefined || fixedSavedWord == "") {
         alert("Rellene el campo por favor!")
     } else {
