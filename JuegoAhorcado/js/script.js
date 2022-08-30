@@ -83,7 +83,12 @@ function saveWord() {
     var fixedSavedWord = textAreaAddWord.value;
     if (fixedSavedWord == undefined || fixedSavedWord == "") {
         alert("Rellene el campo por favor!")
-    }else if(fixedSavedWord){
+    }else if(fixedSavedWord.match("´"))
+    {   
+        textAreaAddWord.value = '';
+        alert("No se permiten tildes!")
+    }
+    else if(fixedSavedWord){
         if (savedWords.includes(fixedSavedWord)) {
             alert("Esa palabra ya existe!")
         } else {

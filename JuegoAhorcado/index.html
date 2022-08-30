@@ -28,7 +28,7 @@
         </section>
         <section class="screen-add-word" id="screenAddWord">
             <div class="textarea-position">
-                <textarea placeholder="Ingrese una palabra" maxlength="8" id="textAreaAddWord" oninput="this.value = this.value.toUpperCase()"  onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))'></textarea>
+                <textarea placeholder="Ingrese una palabra" maxlength="8" id="textAreaAddWord" oninput="this.value = this.value.toUpperCase()"  onkeydown='return /[A-Z]/i.test(event.key) '></textarea>
             </div>
             <div class="advice-words">
                 <img src="imagenes/advice.png">
