@@ -19,7 +19,7 @@ var keyDown;
 var random;
 document.onkeyup = function (event) {
     var inputVariables = (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '');
-    /*if (inputPrueba.value) {
+    if (inputPrueba.value) {
         keyDown = inputPrueba.value.toUpperCase();
         inputPrueba.value = '';
         searchWord(keyDown);
@@ -27,14 +27,12 @@ document.onkeyup = function (event) {
         keyDown = String.fromCharCode(event.keyCode);
         if(keyDown.toUpperCase().charCodeAt(0) == 192){
             keyDown = "Ñ";
-        }*/
-        (inputPrueba.value) ? inputVariables : (inputPrueba.value == undefined || inputPrueba.value == "") ? keyDown = String.fromCharCode(event.keyCode) : inputVariables;
-        (keyDown.toUpperCase().charCodeAt(0) == 192) ? keyDown = "Ñ" : keyDown = String.fromCharCode(event.keyCode);
+        }
         searchWord(keyDown); 
     }
 
    
-//}
+}
 
 window.focus();
 
