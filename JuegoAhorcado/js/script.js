@@ -18,7 +18,6 @@ var screenGameActive = false;
 var keyDown;
 var random;
 document.onkeyup = function (event) {
-    var inputVariables = (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '');
     if (inputPrueba.value) {
         keyDown = inputPrueba.value.toUpperCase();
         inputPrueba.value = '';
