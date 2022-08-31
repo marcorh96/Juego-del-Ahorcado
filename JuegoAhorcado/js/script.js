@@ -18,26 +18,7 @@ var screenGameActive = false;
 var keyDown;
 var random;
 document.onkeyup = function (event) {
-    /* if (inputPrueba.value) {
-         keyDown = inputPrueba.value.toUpperCase();
-         inputPrueba.value = '';
-         searchWord(keyDown);
-     }else if(inputPrueba.value == undefined || inputPrueba.value == ""){
-         keyDown = String.fromCharCode(event.keyCode);
-         if(keyDown.toUpperCase().charCodeAt(0) == 192){
-             keyDown = "Ñ";
-         }
-         searchWord(keyDown); 
-     }*/
-    if (screenGameActive) {
-        (inputPrueba.value) ? (keyDown = inputPrueba.value.toUpperCase(),
-            inputPrueba.value = '',
-            searchWord(keyDown)) :
-            (inputPrueba.value == undefined || inputPrueba.value == "") ? (keyDown = String.fromCharCode(event.keyCode),
-                (keyDown.toUpperCase().charCodeAt(0) == 192) ?
-                    keyDown = "Ñ" : keyDown = String.fromCharCode(event.keyCode)
-                , searchWord(keyDown)) : inputPrueba = true;
-    }
+    if (screenGameActive) return inputActive();
 }
 
 window.focus();
@@ -89,22 +70,14 @@ function addWord() {
 }
 function saveWord() {
     var fixedSavedWord = textAreaAddWord.value;
-    if (fixedSavedWord == undefined || fixedSavedWord == "") {
-        alert("Rellene el campo por favor!")
-    } else if (fixedSavedWord.match("´")) {
-        textAreaAddWord.value = '';
-        alert("No se permiten tildes!")
-    }
+    if (fixedSavedWord == undefined || fixedSavedWord == "") return alert("Rellene el campo por favor!");
+    else if (fixedSavedWord.match("´")) return textAreaAddWord.value = '', alert("No se permiten tildes!");
     else if (fixedSavedWord) {
-        if (savedWords.includes(fixedSavedWord)) {
-            alert("Esa palabra ya existe!")
-        } else {
-            screenGameActive = true;
-            savedWords.push(fixedSavedWord);
-            newGame();
-            screenAddWord.style.display = "none";
-            screenGame.style.display = "block";
-        }
+        (savedWords.includes(fixedSavedWord)) ? (savedWords.includes(fixedSavedWord)) : (screenGameActive = true,
+            savedWords.push(fixedSavedWord),
+            newGame(),
+            screenAddWord.style.display = "none",
+            screenGame.style.display = "block");
     }
 }
 
@@ -115,48 +88,45 @@ function cancel() {
 }
 function searchWord(keyDown) {
     if (keyDown.match(/^[A-ZÑ]*$/)) {
-        if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
-            alert("El juego ha concluido!!");
-        }
+        if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) return alert("El juego ha concluido!!");
         else if (random.includes(keyDown) && oportunity != 6) {
-            if (!keysUsed.includes(keyDown)) {
-                keysUsed.push(keyDown);
-                if (endGame != arrayRandom.length) {
-                    var elements = document.querySelectorAll('.' + keyDown);
-                    elements.forEach(element => {
-                        element.style.visibility = "visible";
-                        endGame++;
-                        if (endGame == arrayRandom.length) {
-                            gameFinishedVictory.style.display = "block";
-                        }
-                    });
-                } else {
-                    alert("El juego ha concluido!!");
-                }
-            } else if (keysUsed.includes(keyDown)) {
-                alert("Esa palabra ya fue incluida!")
-            }
+            if (!keysUsed.includes(keyDown)) return fnKeysUsed();
+            else if (keysUsed.includes(keyDown)) return alert("Esa palabra ya fue incluida!");
         } else {
             if (oportunity != 6 && endGame != arrayRandom.length) {
-                if (!wrongWords.includes(keyDown)) {
-                    oportunity++;
-                    wrongWords.push(keyDown);
-                    wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
-                    document.getElementById(oportunity).style.display = "block";
-                    if (oportunity == 6) {
-                        gameFinishedLose.style.display = 'block';
-                    }
-                }
-                else if (wrongWords.includes(keyDown)) {
-                    alert("Esa palabra ya fue utilizada!")
-                }
-
-            } else if (oportunity == 6) {
-                alert("Alcanzaste el maximo de oportunidades permitidas");
-            } else if (endGame == arrayRandom.length) {
-                alert("El juego ha concluido!!");
-            }
+                if (!wrongWords.includes(keyDown)) return fnWrongWords();
+                else if (wrongWords.includes(keyDown)) return alert("Esa palabra ya fue utilizada!");
+            } else if (oportunity == 6) return alert("Alcanzaste el maximo de oportunidades permitidas");
+            else if (endGame == arrayRandom.length) return alert("El juego ha concluido!!");
         }
     }
 }
+function inputActive() {
+    (inputPrueba.value) ? (keyDown = inputPrueba.value.toUpperCase(),
+        inputPrueba.value = '',
+        searchWord(keyDown)) :
+        (inputPrueba.value == undefined || inputPrueba.value == "") ? (keyDown = String.fromCharCode(event.keyCode),
+            (keyDown.toUpperCase().charCodeAt(0) == 192) ?
+                keyDown = "Ñ" : keyDown = String.fromCharCode(event.keyCode)
+            , searchWord(keyDown)) : inputPrueba = true;
+}
+function fnWrongWords() {
+    oportunity++;
+    wrongWords.push(keyDown);
+    wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
+    document.getElementById(oportunity).style.display = "block";
+    if (oportunity == 6) return gameFinishedLose.style.display = 'block';
+}
+function fnKeysUsed() {
+    var elements = document.querySelectorAll('.' + keyDown);
+    keysUsed.push(keyDown);
+    (endGame != arrayRandom.length) ? (
+        elements.forEach(element => {
+            element.style.visibility = "visible";
+            endGame++;
+            if (endGame == arrayRandom.length) return gameFinishedVictory.style.display = "block";
+        })) : alert("El juego ha concluido!!");
+}
+
+
 
