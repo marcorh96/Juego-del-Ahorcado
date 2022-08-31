@@ -34,18 +34,11 @@ function randomWords() {
 
 function newGame() {
     screenGameActive = true;
-    wordSelected.innerHTML = '';
-    guessedWords.innerHTML = '';
-    wrongWordsResult.innerHTML = '';
-    inputPrueba.value = '';
-    gameFinishedVictory.style.display = "none";
-    gameFinishedLose.style.display = 'none';
+    keysUsed = arrayRandom = wrongWords = [];
+    endGame = oportunity = 0;
+    wordSelected.innerHTML = guessedWords.innerHTML = wrongWordsResult.innerHTML = inputPrueba.value = '';
+    gameFinishedVictory.style.display = gameFinishedLose.style.display = 'none';
     random;
-    keysUsed = [];
-    arrayRandom = [];
-    wrongWords = [];
-    endGame = 0;
-    oportunity = 0;
     randomWords();
     for (var i = 1; i <= 6; i++) {
         document.getElementById(i).style.display = "none";
