@@ -9,16 +9,16 @@ var gameFinishedVictory = document.getElementById("gameFinishedVictory");
 var gameFinishedLose = document.getElementById("gameFinishedLose");
 var inputPrueba = document.getElementById("input-prueba");
 var savedWords = ["HTML", "ALURA", "MARCO", "UNO", "PALABRA"];
-var random;
 var keysUsed = [];
 var wrongWords = [];
 var arrayRandom = [];
 var endGame = 0;
 var oportunity = 0;
 var screenGameActive = false;
+var keyDown;
+var random;
 document.onkeyup = function (event) {
-    var keyDown;
-    if (inputPrueba.value) {
+    /*if (inputPrueba.value) {
         keyDown = inputPrueba.value.toUpperCase();
         inputPrueba.value = '';
         searchWord(keyDown);
@@ -26,12 +26,14 @@ document.onkeyup = function (event) {
         keyDown = String.fromCharCode(event.keyCode);
         if(keyDown.toUpperCase().charCodeAt(0) == 192){
             keyDown = "Ñ";
-        }
-        searchWord(keyDown);
+        }*/
+        (inputPrueba.value) ? (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '') : (inputPrueba.value == undefined || inputPrueba.value == "") ? keyDown = String.fromCharCode(event.keyCode) : (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '');
+        (keyDown.toUpperCase().charCodeAt(0) == 192) ? keyDown = "Ñ" : keyDown = String.fromCharCode(event.keyCode);
+        searchWord(keyDown); 
     }
 
    
-}
+//}
 
 window.focus();
 
@@ -69,7 +71,6 @@ function desistGame() {
     screenPrincipal.style.display = "block";
 }
 function gameStart() {
-    screenGameActive = true;
     screenPrincipal.style.display = "none";
     screenGame.style.display = "block";
     newGame();
@@ -110,7 +111,7 @@ function cancel() {
 }
 
 function searchWord(keyDown) {
-    if (screenGameActive == true) {
+    if (screenGameActive) {
         if (keyDown.match(/^[A-Z]*$/) || keyDown.match('Ñ')) {
             if (endGame == arrayRandom.length && keysUsed.includes(keyDown)) {
                 alert("El juego ha concluido!!");
