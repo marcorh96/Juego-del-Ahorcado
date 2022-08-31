@@ -140,13 +140,14 @@ function searchWord(keyDown) {
                         wrongWords.push(keyDown);
                         wrongWordsResult.innerHTML += '<span  class="wrong-words">' + keyDown + '</span>';
                         document.getElementById(oportunity).style.display = "block";
+                        if (oportunity == 6) {
+                            gameFinishedLose.style.display = 'block';
+                        }
                     }
                     else if(wrongWords.includes(keyDown)){
                         alert("Esa palabra ya fue utilizada!")
                     }
-                    else if (oportunity == 6) {
-                        gameFinishedLose.style.display = 'block';
-                    }
+                    
                 } else if (oportunity == 6) {
                     alert("Alcanzaste el maximo de oportunidades permitidas");
                 } else if (endGame == arrayRandom.length) {
