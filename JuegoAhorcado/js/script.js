@@ -18,6 +18,7 @@ var screenGameActive = false;
 var keyDown;
 var random;
 document.onkeyup = function (event) {
+    var inputVariables = (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '');
     /*if (inputPrueba.value) {
         keyDown = inputPrueba.value.toUpperCase();
         inputPrueba.value = '';
@@ -27,7 +28,7 @@ document.onkeyup = function (event) {
         if(keyDown.toUpperCase().charCodeAt(0) == 192){
             keyDown = "Ñ";
         }*/
-        (inputPrueba.value) ? (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '') : (inputPrueba.value == undefined || inputPrueba.value == "") ? keyDown = String.fromCharCode(event.keyCode) : (keyDown = inputPrueba.value.toUpperCase(), inputPrueba.value = '');
+        (inputPrueba.value) ? inputVariables : (inputPrueba.value == undefined || inputPrueba.value == "") ? keyDown = String.fromCharCode(event.keyCode) : inputVariables;
         (keyDown.toUpperCase().charCodeAt(0) == 192) ? keyDown = "Ñ" : keyDown = String.fromCharCode(event.keyCode);
         searchWord(keyDown); 
     }
