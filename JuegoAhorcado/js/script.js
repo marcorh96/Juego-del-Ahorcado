@@ -120,6 +120,14 @@ function fnKeysUsed() {
             if (endGame == arrayRandom.length) return gameFinishedVictory.style.display = "block";
         })) : alert("El juego ha concluido!!");
 }
+textAreaAddWord.addEventListener('input', updateValue);
+
+function updateValue(e) {
+    if (textAreaAddWord.value.includes("\n")) return textAreaAddWord.value = textAreaAddWord.value.replaceAll("\n", "");
+    else if (textAreaAddWord.value.length > 8) return alert("Sobrepaso el limite de palabras permitidas"),
+        textAreaAddWord.value = textAreaAddWord.value.substr(0, 8);
+}
+
 
 
 
