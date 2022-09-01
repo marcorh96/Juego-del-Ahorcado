@@ -19,10 +19,10 @@
         <section class="screen-buttons-principal" id="screenPrincipal">
             <ul class="ul-inicio">
                 <li class="buttons-position-start">
-                    <button class="button-start-game" onclick="gameStart()"><span>Iniciar Juego</span></button>
+                    <button class="button-start-game" type="button" onclick="gameStart()"><span>Iniciar Juego</span></button>
                 </li>
                 <li class="buttons-position-start">
-                    <button class="button-add-word" onclick="addWord()"><span>Agregar Nueva Palabra</span></button>
+                    <button class="button-add-word" onclick="addWord()" type="button"><span>Agregar Nueva Palabra</span></button>
                 </li>
             </ul>
         </section>
@@ -36,8 +36,8 @@
             </div>
             <div class="ul-add-word-position">
                 <ul class="ul-add-word">
-                    <li><button class="button-save" onclick="saveWord()"><span>Guardar y empezar</span></button></li>
-                    <li><button class="button-cancel" onclick="cancel()"><span>Cancelar</span></button></li>
+                    <li><button class="button-save" type="button" onclick="saveWord()"><span>Guardar y empezar</span></button></li>
+                    <li><button class="button-cancel" type="button" onclick="cancel()"><span>Cancelar</span></button></li>
                 </ul>
             </div>
         </section>
@@ -80,9 +80,9 @@
                 </div>
                 <div class="ul-new-game-position">
                     <ul>
-                        <li><button class="button-new-game" type="button" onclick="newGame()"><span>Nuevo
+                        <li><button type="button" class="button-new-game" type="button" onclick="newGame()"><span>Nuevo
                                     Juego</span></button></li>
-                        <li><button class="button-desist" type="button"
+                        <li><button type="button" class="button-desist" type="button"
                                 onclick="desistGame()"><span>Desistir</span></button></li>
                     </ul>
                 </div>
