@@ -65,7 +65,7 @@ function saveWord() {
     var fixedSavedWord = textAreaAddWord.value;
     if (fixedSavedWord == undefined || fixedSavedWord == "") return alert("Rellene el campo por favor!");
     else if (fixedSavedWord) {
-        (savedWords.includes(fixedSavedWord)) ? (savedWords.includes(fixedSavedWord)) : (screenGameActive = true,
+        (savedWords.includes(fixedSavedWord)) ? alert("Esa palabra ya existe!") : (screenGameActive = true,
             savedWords.push(fixedSavedWord),
             newGame(),
             screenAddWord.style.display = "none",
