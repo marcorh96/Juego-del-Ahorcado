@@ -64,7 +64,6 @@ function addWord() {
 function saveWord() {
     var fixedSavedWord = textAreaAddWord.value;
     if (fixedSavedWord == undefined || fixedSavedWord == "") return alert("Rellene el campo por favor!");
-    else if (fixedSavedWord.match("´")) return textAreaAddWord.value = '', alert("No se permiten tildes!");
     else if (fixedSavedWord) {
         (savedWords.includes(fixedSavedWord)) ? (savedWords.includes(fixedSavedWord)) : (screenGameActive = true,
             savedWords.push(fixedSavedWord),
@@ -122,9 +121,8 @@ function fnKeysUsed() {
 }
 
 textAreaAddWord.addEventListener('input', updateValue);
-
 function updateValue(e) {
-    if (textAreaAddWord.value.includes("\n")) return textAreaAddWord.value = textAreaAddWord.value.replaceAll("\n", "");
+    if (textAreaAddWord.value.includes("\n")|| textAreaAddWord.value.includes("´")) return textAreaAddWord.value = textAreaAddWord.value.replaceAll(/[\n\´]/g, "");
     else if (textAreaAddWord.value.length > 8) return alert("Sobrepaso el limite de palabras permitidas"),
         textAreaAddWord.value = textAreaAddWord.value.substr(0, 8);
 }
