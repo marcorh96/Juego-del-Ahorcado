@@ -120,6 +120,7 @@ function fnKeysUsed() {
             if (endGame == arrayRandom.length) return gameFinishedVictory.style.display = "block";
         })) : alert("El juego ha concluido!!");
 }
+
 textAreaAddWord.addEventListener('input', updateValue);
 
 function updateValue(e) {
