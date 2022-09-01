@@ -122,8 +122,9 @@ function fnKeysUsed() {
 
 textAreaAddWord.addEventListener('input', updateValue);
 function updateValue(e) {
-    if (textAreaAddWord.value.includes("\n")|| textAreaAddWord.value.includes("´")) return textAreaAddWord.value = textAreaAddWord.value.replaceAll(/[\n\´]/g, "");
-    else if (textAreaAddWord.value.length > 8) return alert("Sobrepaso el limite de palabras permitidas"),
+    //var regExp = /[A-ZÑ]/i;
+    textAreaAddWord.value = textAreaAddWord.value.replaceAll(/[^A-ZÑ]/g, '')
+     if (textAreaAddWord.value.length > 8) return alert("Sobrepaso el limite de palabras permitidas"),
         textAreaAddWord.value = textAreaAddWord.value.substr(0, 8);
 }
 
