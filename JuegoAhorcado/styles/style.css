@@ -408,6 +408,9 @@ button:active {
     .words-space-position{
         margin-left: 35px;
     }
+    .guessed-words-position{
+        margin: 2em 0 0 4em;
+    }
     .guessed-words-position span {
         width: 88px;
         font-size: 1.9em;
