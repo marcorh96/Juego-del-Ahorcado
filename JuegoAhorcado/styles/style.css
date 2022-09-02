@@ -390,11 +390,16 @@ button:active {
 
 @media screen and (max-width:840px) {
     /*ScreenPrincipal*/
+    .ul-inicio {
+        margin-top: 10%;
+    }
+    /*ScreeAddWord*/
+    .advice-words{
+        margin: 1em 10%;
+    }
+    /*ScreenGame*/
     .guessed-words-position {
         width: 100%;
-    }
-    .ul-inicio {
-        margin: 30%;
     }
     .words-space{
         max-width: 50px;
@@ -404,9 +409,18 @@ button:active {
         margin-left: 35px;
     }
     .guessed-words-position span {
+        width: 88px;
         font-size: 1.9em;
     }
     
+    .ul-new-game-position{
+        margin: 15rem 0 0 0;
+    }
+    .input-prueba{
+        display: block;
+        font-size: 1.5em;
+        margin-top: 155%;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -449,6 +463,7 @@ button:active {
     }
     .advice-words{
         margin-bottom: 2em;
+        margin: 1em auto;
     }
     .ul-add-word li {
         margin:1.5em auto;
@@ -527,6 +542,7 @@ button:active {
     .input-prueba{
         display: block;
         margin-top: 127%;
+        font-size: 16px;
     }
 
 
