@@ -376,7 +376,7 @@ button:active {
 @media screen and (max-width:1280px) {
     .logo{
         width: 40px;
-        margin: 2em 0 2em 2em;
+        margin: 1em;
     }
     .ul-new-game-position ul{
          margin-bottom: 2em;
@@ -384,6 +384,10 @@ button:active {
     /*Screen Add word*/
     .advice-words {
         width: 50%;
+    }
+    /*Screen Game*/
+    .ul-new-game-position{
+        margin: 8em 0 0 0;
     }
 }
 
